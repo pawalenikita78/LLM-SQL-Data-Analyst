@@ -1,0 +1,17 @@
+# Core LLM and LangChain Integration
+google-genai>=0.16.0
+langchain>=0.2.0
+langchain-google-genai>=0.0.10
+
+# Frontend and Utilities
+streamlit>=1.35.0
+pandas>=2.2.2
+python-dotenv>=1.0.1
+
+# Database Connector
+# Note: psycopg2-binary is generally the safest for cross-platform compatibility
+psycopg2-binary>=2.9.9
+
+streamlit>=1.35.0
+tabulate>=0.8.10
+mysql-connector-python>=8.1.0

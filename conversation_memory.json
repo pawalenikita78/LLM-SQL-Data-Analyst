@@ -1,0 +1,68 @@
+[
+  {
+    "question": "give me top 10 product by contribution ",
+    "question_tokens": [
+      "give",
+      "me",
+      "top",
+      "10",
+      "product",
+      "contribution"
+    ],
+    "sql_query": "SELECT\n  p.product_name,\n  SUM(od.unit_price * od.quantity * (\n    1 - od.discount\n  )) AS total_contribution\nFROM order_details AS od\nJOIN products AS p\n  ON od.product_id = p.product_id\nGROUP BY\n  p.product_id,\n  p.product_name\nORDER BY\n  total_contribution DESC\nLIMIT 10;",
+    "summary": "This data displays the top 10 products ranked by their total contribution. \"Côte de Blaye\" is the leading contributor, significantly outperforming other products with over 140,000 in contribution. The contributions generally decrease down the list, with the tenth product, \"Rössle Sauerkraut,\" contributing around 25,000.",
+    "results": [
+      {
+        "index": 0,
+        "product_name": "Côte de Blaye",
+        "total_contribution": 141396.7356273254
+      },
+      {
+        "index": 1,
+        "product_name": "Thüringer Rostbratwurst",
+        "total_contribution": 80368.6724385033
+      },
+      {
+        "index": 2,
+        "product_name": "Raclette Courdavault",
+        "total_contribution": 71155.69990943
+      },
+      {
+        "index": 3,
+        "product_name": "Tarte au sucre",
+        "total_contribution": 47234.969978504174
+      },
+      {
+        "index": 4,
+        "product_name": "Camembert Pierrot",
+        "total_contribution": 46825.48029542655
+      },
+      {
+        "index": 5,
+        "product_name": "Gnocchi di nonna Alice",
+        "total_contribution": 42593.0598222503
+      },
+      {
+        "index": 6,
+        "product_name": "Manjimup Dried Apples",
+        "total_contribution": 41819.65024582073
+      },
+      {
+        "index": 7,
+        "product_name": "Alice Mutton",
+        "total_contribution": 32698.380216373203
+      },
+      {
+        "index": 8,
+        "product_name": "Carnarvon Tigers",
+        "total_contribution": 29171.874963399023
+      },
+      {
+        "index": 9,
+        "product_name": "Rössle Sauerkraut",
+        "total_contribution": 25696.63978933155
+      }
+    ],
+    "timestamp": "2025-10-27T23:55:25.085499Z"
+  }
+]

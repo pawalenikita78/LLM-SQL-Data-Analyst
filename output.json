@@ -1,0 +1,183 @@
+{
+  
+  "customers": {
+    "_description": "<<A 1-2 line summary of what the customers table contains.>>",
+    "columns": {
+      "customer_id": {
+        "_description": "This column uniquely identifies each customer in the `customers` table, likely serving as its primary key.",
+        "details": "Data Type: char"
+      },
+      "company_name": {
+        "_description": "This column holds the official name of the company associated with each customer record.",
+        "details": "Data Type: varchar"
+      },
+      "contact_name": {
+        "_description": "This column stores the full name of the primary contact person associated with each customer record.",
+        "details": "Data Type: varchar"
+      },
+      "contact_title": {
+        "_description": "This column stores the job title or role of the primary contact person for each customer.",
+        "details": "Data Type: varchar | Known Values (<= 20 unique): Accounting Manager, Assistant Sales Agent, Assistant Sales Representative, Marketing Assistant, Marketing Manager, Order Administrator, Owner, Owner/Marketing Assistant, Sales Agent, Sales Associate, Sales Manager, Sales Representative"
+      },
+      "address": {
+        "_description": "This column stores the physical street address for each customer, including street name, number, and other relevant location details.",
+        "details": "Data Type: varchar"
+      },
+      "city": {
+        "_description": "This column stores the name of the city where each customer is located.",
+        "details": "Data Type: varchar"
+      },
+      "region": {
+        "_description": "This column stores two-letter codes that identify the geographical region or state associated with a customer. The presence of many NULL values indicates this information is optional.",
+        "details": "Data Type: varchar | Known Values (<= 20 unique): None, AK, BC, CA, Co. Cork, DF, ID, Isle of Wight, Lara, MT, NM, Nueva Esparta, OR, Qu\u00e9bec, RJ, SP, T\u00e1chira, WA, WY"
+      },
+      "postal_code": {
+        "_description": "<<ERROR: LLM failed to generate description.>>",
+        "details": "Data Type: varchar"
+      },
+      "country": {
+        "_description": "<<ERROR: LLM failed to generate description.>>",
+        "details": "Data Type: varchar"
+      },
+      "phone": {
+        "_description": "<<ERROR: LLM failed to generate description.>>",
+        "details": "Data Type: varchar"
+      },
+      "fax": {
+        "_description": "<<ERROR: LLM failed to generate description.>>",
+        "details": "Data Type: varchar"
+      }
+    }
+  },
+  "order_details": {
+    "_description": "<<A 1-2 line summary of what the order_details table contains.>>",
+    "columns": {
+      "order_id": {
+        "_description": "The order_id column is of type smallint.",
+        "details": "Data Type: smallint"
+      },
+      "product_id": {
+        "_description": "The product_id column is of type smallint.",
+        "details": "Data Type: smallint"
+      },
+      "unit_price": {
+        "_description": "The unit_price column is of type float.",
+        "details": "Data Type: float"
+      },
+      "quantity": {
+        "_description": "The quantity column is of type smallint.",
+        "details": "Data Type: smallint"
+      },
+      "discount": {
+        "_description": "The discount column is of type float.",
+        "details": "Data Type: float"
+      }
+    }
+  },
+  "orders": {
+    "_description": "<<A 1-2 line summary of what the orders table contains.>>",
+    "columns": {
+      "order_id": {
+        "_description": "The order_id column is of type smallint.",
+        "details": "Data Type: smallint"
+      },
+      "customer_id": {
+        "_description": "The customer_id column is of type char.",
+        "details": "Data Type: char"
+      },
+      "employee_id": {
+        "_description": "The employee_id column is of type smallint.",
+        "details": "Data Type: smallint"
+      },
+      "order_date": {
+        "_description": "The order_date column is of type date.",
+        "details": "Data Type: date"
+      },
+      "required_date": {
+        "_description": "The required_date column is of type date.",
+        "details": "Data Type: date"
+      },
+      "shipped_date": {
+        "_description": "The shipped_date column is of type date.",
+        "details": "Data Type: date"
+      },
+      "ship_via": {
+        "_description": "The ship_via column is of type smallint.",
+        "details": "Data Type: smallint"
+      },
+      "freight": {
+        "_description": "The freight column is of type float.",
+        "details": "Data Type: float"
+      },
+      "ship_name": {
+        "_description": "The ship_name column is of type varchar.",
+        "details": "Data Type: varchar"
+      },
+      "ship_address": {
+        "_description": "The ship_address column is of type varchar.",
+        "details": "Data Type: varchar"
+      },
+      "ship_city": {
+        "_description": "The ship_city column is of type varchar.",
+        "details": "Data Type: varchar"
+      },
+      "ship_region": {
+        "_description": "The ship_region column is of type varchar.",
+        "details": "Data Type: varchar"
+      },
+      "ship_postal_code": {
+        "_description": "The ship_postal_code column is of type varchar.",
+        "details": "Data Type: varchar"
+      },
+      "ship_country": {
+        "_description": "The ship_country column is of type varchar.",
+        "details": "Data Type: varchar"
+      }
+    }
+  },
+  "products": {
+    "_description": "<<A 1-2 line summary of what the products table contains.>>",
+    "columns": {
+      "product_id": {
+        "_description": "The product_id column is of type smallint.",
+        "details": "Data Type: smallint"
+      },
+      "product_name": {
+        "_description": "The product_name column is of type varchar.",
+        "details": "Data Type: varchar"
+      },
+      "supplier_id": {
+        "_description": "The supplier_id column is of type smallint.",
+        "details": "Data Type: smallint"
+      },
+      "category_id": {
+        "_description": "The category_id column is of type smallint.",
+        "details": "Data Type: smallint"
+      },
+      "quantity_per_unit": {
+        "_description": "The quantity_per_unit column is of type varchar.",
+        "details": "Data Type: varchar"
+      },
+      "unit_price": {
+        "_description": "The unit_price column is of type float.",
+        "details": "Data Type: float"
+      },
+      "units_in_stock": {
+        "_description": "The units_in_stock column is of type smallint.",
+        "details": "Data Type: smallint"
+      },
+      "units_on_order": {
+        "_description": "The units_on_order column is of type smallint.",
+        "details": "Data Type: smallint"
+      },
+      "reorder_level": {
+        "_description": "The reorder_level column is of type smallint.",
+        "details": "Data Type: smallint"
+      },
+      "discontinued": {
+        "_description": "The discontinued column is of type int.",
+        "details": "Data Type: int"
+      }
+    }
+  }
+}
